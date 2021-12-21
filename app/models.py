@@ -73,7 +73,7 @@ class Product(models.Model):
     product_image = models.ImageField(upload_to="productimg")
 
     def __str__(self):
-        return str(self)
+        return str(self.id)
 
 
 class Cart(models.Model):
@@ -82,7 +82,7 @@ class Cart(models.Model):
     quantity = models.PositiveIntegerField(default=1)
 
     def __str__(self):
-        return str(self)
+        return str(self.id)
 
 
 STATUS_CHOICES = (
